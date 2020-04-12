@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CLIENT>
+  <Client>
+    <surname>Сайын</surname>
+    <name>Ильяс</name>
+    <patronimic>Сайынулы</patronimic>
+    <number>123456</number>
+    <seria>1007</seria>
+    <datePas>16.12.2017</datePas>
+    <CLIENT />
+    <Category>
+      <name>Ювелирные</name>
+      <discription>Драгоценности, аксессуары</discription>
+      <Order>
+        <name>Ювелирные</name>
+        <number>123456</number>
+        <seria>1007</seria>
+        <discriptionOrder>Ваза 18 века</discriptionOrder>
+        <dateGive>31.03.2020</dateGive>
+        <dateTake>03.04.2020</dateTake>
+        <summa>510000,00</summa>
+        <comission>55000,00</comission>
+        <Journal>
+          <name>Ювелирные</name>
+          <number>123456</number>
+          <seria>1007</seria>
+          <summa>500000,00</summa>
+          <discriptionOrder>Ваза 18 века</discriptionOrder>
+          <dateGive>31.03.2020</dateGive>
+          <dateTake>03.04.2020</dateTake>
+        </Journal>
+        <Journal>
+          <name>Ювелирные</name>
+          <number>123456</number>
+          <seria>1007</seria>
+          <summa>510000,00</summa>
+          <discriptionOrder>Ваза 18 века</discriptionOrder>
+          <dateGive>31.03.2020</dateGive>
+          <dateTake>03.04.2020</dateTake>
+        </Journal>
+      </Order>
+    </Category>
+    <Category>
+      <name>Бытовая техника</name>
+      <discription>Телевизор, стиральная машина и т.д.</discription>
+      <Order>
+        <name>Бытовая техника</name>
+        <number>123456</number>
+        <seria>1007</seria>
+        <discriptionOrder>Apple watch</discriptionOrder>
+        <dateGive>31.03.2020</dateGive>
+        <dateTake>31.03.2020</dateTake>
+        <summa>100000,00</summa>
+        <comission>10000,00</comission>
+        <Journal>
+          <name>Бытовая техника</name>
+          <number>123456</number>
+          <seria>1007</seria>
+          <summa>100000,00</summa>
+          <discriptionOrder>Apple watch</discriptionOrder>
+          <dateGive>31.03.2020</dateGive>
+          <dateTake>31.03.2020</dateTake>
+        </Journal>
+      </Order>
+    </Category>
+    <Category>
+      <name>Антиквариат</name>
+      <discription>Часы, драгоценности и т.д.</discription>
+    </Category>
+  </Client>
+  <Client>
+    <surname>Соловьев</surname>
+    <name>Эдуард</name>
+    <patronimic>Альбертович</patronimic>
+    <number>654321</number>
+    <seria>1150</seria>
+    <datePas>01.07.2009</datePas>
+    <CLIENT />
+    <Category>
+      <name>Ювелирные</name>
+      <discription>Драгоценности, аксессуары</discription>
+      <Order>
+        <name>Ювелирные</name>
+        <number>654321</number>
+        <seria>1150</seria>
+        <discriptionOrder>Алмаз</discriptionOrder>
+        <dateGive>31.03.2020</dateGive>
+        <dateTake>31.03.2020</dateTake>
+        <summa>2500000,00</summa>
+        <comission>250000,00</comission>
+        <Journal>
+          <name>Ювелирные</name>
+          <number>654321</number>
+          <seria>1150</seria>
+          <summa>2500000,00</summa>
+          <discriptionOrder>Алмаз</discriptionOrder>
+          <dateGive>31.03.2020</dateGive>
+          <dateTake>31.03.2020</dateTake>
+        </Journal>
+      </Order>
+    </Category>
+    <Category>
+      <name>Бытовая техника</name>
+      <discription>Телевизор, стиральная машина и т.д.</discription>
+    </Category>
+    <Category>
+      <name>Антиквариат</name>
+      <discription>Часы, драгоценности и т.д.</discription>
+    </Category>
+  </Client>
+  <Client>
+    <surname>Чубенко</surname>
+    <name>Марк</name>
+    <patronimic>Грегориевич</patronimic>
+    <number>321654</number>
+    <seria>1307</seria>
+    <datePas>31.07.2000</datePas>
+  </Client>
+  <Client>
+    <surname>Архипов</surname>
+    <name>Александр</name>
+    <patronimic>Сергеевич</patronimic>
+    <number>321456</number>
+    <seria>1302</seria>
+    <datePas>10.03.2000</datePas>
+    <CLIENT />
+    <Category>
+      <name>Ювелирные</name>
+      <discription>Драгоценности, аксессуары</discription>
+    </Category>
+    <Category>
+      <name>Бытовая техника</name>
+      <discription>Телевизор, стиральная машина и т.д.</discription>
+    </Category>
+    <Category>
+      <name>Антиквариат</name>
+      <discription>Часы, драгоценности и т.д.</discription>
+      <Order>
+        <name>Антиквариат</name>
+        <number>321456</number>
+        <seria>1302</seria>
+        <discriptionOrder>Часы 20 века</discriptionOrder>
+        <dateGive>31.03.2020</dateGive>
+        <dateTake>31.03.2020</dateTake>
+        <summa>70000,00</summa>
+        <comission>7000,00</comission>
+        <Journal>
+          <name>Антиквариат</name>
+          <number>321456</number>
+          <seria>1302</seria>
+          <summa>70000,00</summa>
+          <discriptionOrder>Часы 20 века</discriptionOrder>
+          <dateGive>31.03.2020</dateGive>
+          <dateTake>31.03.2020</dateTake>
+        </Journal>
+      </Order>
+    </Category>
+  </Client>
+  <Client>
+    <surname>Рыбак</surname>
+    <name>Константин</name>
+    <patronimic>Виталиевич</patronimic>
+    <number>332112</number>
+    <seria>4321</seria>
+    <datePas>01.02.2000</datePas>
+    <CLIENT />
+    <Category>
+      <name>Ювелирные</name>
+      <discription>Драгоценности, аксессуары</discription>
+      <Order>
+        <name>Ювелирные</name>
+        <number>332112</number>
+        <seria>4321</seria>
+        <discriptionOrder>Топаз</discriptionOrder>
+        <dateGive>31.03.2020</dateGive>
+        <dateTake>31.03.2020</dateTake>
+        <summa>150000,00</summa>
+        <comission>15000,00</comission>
+        <Journal>
+          <name>Ювелирные</name>
+          <number>332112</number>
+          <seria>4321</seria>
+          <summa>150000,00</summa>
+          <discriptionOrder>Топаз</discriptionOrder>
+          <dateGive>31.03.2020</dateGive>
+          <dateTake>31.03.2020</dateTake>
+        </Journal>
+      </Order>
+    </Category>
+    <Category>
+      <name>Бытовая техника</name>
+      <discription>Телевизор, стиральная машина и т.д.</discription>
+    </Category>
+    <Category>
+      <name>Антиквариат</name>
+      <discription>Часы, драгоценности и т.д.</discription>
+    </Category>
+  </Client>
+</CLIENT>

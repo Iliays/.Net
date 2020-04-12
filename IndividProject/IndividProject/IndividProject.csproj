@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63E803E9-C9A9-412B-8EAC-ABB4F653483A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IndividProject</RootNamespace>
+    <AssemblyName>IndividProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="ClassXML\CATEGORY.cs" />
+    <Compile Include="ClassXML\CategoryXml.cs" />
+    <Compile Include="ClassXML\CLIENT.cs" />
+    <Compile Include="ClassXML\ClientXml.cs" />
+    <Compile Include="ClassXML\JOURNAL.cs" />
+    <Compile Include="ClassXML\JournalTest.cs" />
+    <Compile Include="ClassXML\JournalXml.cs" />
+    <Compile Include="ClassXML\OrderTest.cs" />
+    <Compile Include="ClassXML\OrderXml.cs" />
+    <Compile Include="DataModel\Category.cs" />
+    <Compile Include="DataModel\Client.cs" />
+    <Compile Include="DataModel\Journal.cs" />
+    <Compile Include="DataModel\LombardContext.cs" />
+    <Compile Include="DataModel\Order.cs" />
+    <Compile Include="Forms\Category\CategoryFormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Category\CategoryFormAdd.Designer.cs">
+      <DependentUpon>CategoryFormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\User.cs" />
+    <Compile Include="Forms\Category\CategoryFormDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Category\CategoryFormDelete.Designer.cs">
+      <DependentUpon>CategoryFormDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Category\CategoryFormUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Category\CategoryFormUpdate.Designer.cs">
+      <DependentUpon>CategoryFormUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Client\ClientFormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\ClientFormAdd.Designer.cs">
+      <DependentUpon>ClientFormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Client\ClientFormDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\ClientFormDelete.Designer.cs">
+      <DependentUpon>ClientFormDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Client\ClientFormUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\ClientFormUpdate.Designer.cs">
+      <DependentUpon>ClientFormUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Others\Export.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Others\Export.Designer.cs">
+      <DependentUpon>Export.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Others\JournalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Others\JournalForm.Designer.cs">
+      <DependentUpon>JournalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\FifthQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\FifthQuery.Designer.cs">
+      <DependentUpon>FifthQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\FirstQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\FirstQuery.Designer.cs">
+      <DependentUpon>FirstQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\ForthQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\ForthQuery.Designer.cs">
+      <DependentUpon>ForthQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Others\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Others\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Others\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Others\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\SecondQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\SecondQuery.Designer.cs">
+      <DependentUpon>SecondQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Order\ShowOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Order\ShowOrdersForm.Designer.cs">
+      <DependentUpon>ShowOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\ThirdQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\ThirdQuery.Designer.cs">
+      <DependentUpon>ThirdQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Category\UpdateCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Category\UpdateCategory.Designer.cs">
+      <DependentUpon>UpdateCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Order\OrderFormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Order\OrderFormAdd.Designer.cs">
+      <DependentUpon>OrderFormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Order\OrderFormDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Order\OrderFormDelete.Designer.cs">
+      <DependentUpon>OrderFormDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Order\OrderFormUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Order\OrderFormUpdate.Designer.cs">
+      <DependentUpon>OrderFormUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Others\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Others\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Client\UpdateClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\UpdateClient.Designer.cs">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Order\UpdateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Order\UpdateOrder.Designer.cs">
+      <DependentUpon>UpdateOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003221132264_InitialCreate.cs" />
+    <Compile Include="Migrations\202003221132264_InitialCreate.Designer.cs">
+      <DependentUpon>202003221132264_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003221601203_Journal.cs" />
+    <Compile Include="Migrations\202003221601203_Journal.Designer.cs">
+      <DependentUpon>202003221601203_Journal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003221603423_Journal2.cs" />
+    <Compile Include="Migrations\202003221603423_Journal2.Designer.cs">
+      <DependentUpon>202003221603423_Journal2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003221610519_User.cs" />
+    <Compile Include="Migrations\202003221610519_User.Designer.cs">
+      <DependentUpon>202003221610519_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003221611536_User2.cs" />
+    <Compile Include="Migrations\202003221611536_User2.Designer.cs">
+      <DependentUpon>202003221611536_User2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003231329132_ChangeClient.cs" />
+    <Compile Include="Migrations\202003231329132_ChangeClient.Designer.cs">
+      <DependentUpon>202003231329132_ChangeClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003231432497_ClientChange2.cs" />
+    <Compile Include="Migrations\202003231432497_ClientChange2.Designer.cs">
+      <DependentUpon>202003231432497_ClientChange2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003301151590_ChangeAll.cs" />
+    <Compile Include="Migrations\202003301151590_ChangeAll.Designer.cs">
+      <DependentUpon>202003301151590_ChangeAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003301217513_DateChangeOrder.cs" />
+    <Compile Include="Migrations\202003301217513_DateChangeOrder.Designer.cs">
+      <DependentUpon>202003301217513_DateChangeOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlSerialization.cs" />
+    <EmbeddedResource Include="Forms\Category\CategoryFormAdd.resx">
+      <DependentUpon>CategoryFormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Category\CategoryFormDelete.resx">
+      <DependentUpon>CategoryFormDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Category\CategoryFormUpdate.resx">
+      <DependentUpon>CategoryFormUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\ClientFormAdd.resx">
+      <DependentUpon>ClientFormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\ClientFormDelete.resx">
+      <DependentUpon>ClientFormDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\ClientFormUpdate.resx">
+      <DependentUpon>ClientFormUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Others\Export.resx">
+      <DependentUpon>Export.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Others\JournalForm.resx">
+      <DependentUpon>JournalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\FifthQuery.resx">
+      <DependentUpon>FifthQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\FirstQuery.resx">
+      <DependentUpon>FirstQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\ForthQuery.resx">
+      <DependentUpon>ForthQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Others\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Others\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\SecondQuery.resx">
+      <DependentUpon>SecondQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Order\ShowOrdersForm.resx">
+      <DependentUpon>ShowOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\ThirdQuery.resx">
+      <DependentUpon>ThirdQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Category\UpdateCategory.resx">
+      <DependentUpon>UpdateCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Order\OrderFormAdd.resx">
+      <DependentUpon>OrderFormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Order\OrderFormDelete.resx">
+      <DependentUpon>OrderFormDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Order\OrderFormUpdate.resx">
+      <DependentUpon>OrderFormUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Others\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\UpdateClient.resx">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Order\UpdateOrder.resx">
+      <DependentUpon>UpdateOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003221132264_InitialCreate.resx">
+      <DependentUpon>202003221132264_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003221601203_Journal.resx">
+      <DependentUpon>202003221601203_Journal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003221603423_Journal2.resx">
+      <DependentUpon>202003221603423_Journal2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003221610519_User.resx">
+      <DependentUpon>202003221610519_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003221611536_User2.resx">
+      <DependentUpon>202003221611536_User2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003231329132_ChangeClient.resx">
+      <DependentUpon>202003231329132_ChangeClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003231432497_ClientChange2.resx">
+      <DependentUpon>202003231432497_ClientChange2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003301151590_ChangeAll.resx">
+      <DependentUpon>202003301151590_ChangeAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003301217513_DateChangeOrder.resx">
+      <DependentUpon>202003301217513_DateChangeOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
