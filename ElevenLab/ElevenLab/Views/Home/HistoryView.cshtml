@@ -1,0 +1,47 @@
+﻿@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+	<h3>Информация о сотрудниках</h3>
+	<table class="table-striped">
+		<tr>
+			<td><p class="col-md-10">Сотрудник</p></td>
+			<td><p class="col-md-10">Должность</p></td>
+			<td><p class="col-md-10">Ставка</p></td>
+			<td><p class="col-md-10">Статус</p></td>
+			<td><p class="col-md-10">Причина увольнения</p></td>
+			<td><p class="col-md-10">Дата принятия на работу</p></td>
+			<td><p class="col-md-10">Дата увольнения</p></td>
+			<td><p class="col-md-10">Месяц получения ЗП</p></td>
+			<td><p class="col-md-10">Год получения ЗП</p></td>
+		</tr>
+		@foreach (var history in ViewBag.Histories)
+		{
+			<tr>
+				<td><p class="col-md-10">@history.WorkerId</p></td>
+				<td><p class="col-md-10">@history.PositionId</p></td>
+				<td><p class="col-md-10">@history.WageRate</p></td>
+				<td><p class="col-md-10">@history.Status</p></td>
+				<td><p class="col-md-10">@history.WhyDismissal</p></td>
+				<td><p class="col-md-10">@history.DateOfEmployment.ToShortDateString().ToString()</p></td>
+				@if (history.DateOfDismissal.ToShortDateString().ToString() == "01.01.0001")
+				{
+					<td><p class="col-md-10"></p></td>
+				}
+				else
+				{
+					<td><p class="col-md-10">@history.DateOfDismissal.ToShortDateString().ToString()</p></td>
+				}
+				<td><p class="col-md-10">@history.OneMonthSalary</p></td>
+				<td><p class="col-md-10">@history.YearSalary</p></td>
+			</tr>
+		}
+
+	</table>
+	<h4><a href="/Home/AddNewHistory">Добавить запись</a></h4>
+</div>
+
+<div>
+	@Html.ActionLink("Назад", "Index")
+</div>

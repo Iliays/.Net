@@ -1,0 +1,39 @@
+﻿@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+	<h3>Формирование сведений о движении сотрудника в хронологическом порядке</h3>
+	<table class="table">
+		<tr>
+			<th scope="col">@Html.Label("Должность")&nbsp;</th>
+			<th scope="col">@Html.Label("Дата принятия")&nbsp;</th>
+			<th scope="col">@Html.Label("Дата увольнения")&nbsp;</th>
+			<th scope="col">@Html.Label("Причина увольнения")&nbsp;</th>
+		</tr>
+		@foreach (var item in ViewBag.Chronical)
+		{
+			<tr>
+				<td><p>@item.NamePosition&nbsp;</p></td>
+
+				@if (item.DateOfEmployment.ToShortDateString().ToString() != "01.01.0001")
+				{
+					<td><p>@item.DateOfEmployment.ToShortDateString().ToString()&nbsp;</p></td>
+				}
+				else
+				{
+					<td><p>&nbsp;</p></td>
+				}
+				@if (item.DateOfDismissal.ToShortDateString().ToString() != "01.01.0001")
+				{
+					<td><p>@item.DateOfDismissal.ToShortDateString().ToString()&nbsp;</p></td>
+				}
+				else
+				{
+					<td><p>&nbsp;</p></td>
+				}
+				<td><p>@item.WhyDismissal&nbsp;</p></td>
+			</tr>
+		}
+	</table>
+</div>

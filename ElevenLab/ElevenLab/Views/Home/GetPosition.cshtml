@@ -1,0 +1,24 @@
+﻿@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+	<h3>Сотрудники</h3>
+	<table class="table">
+		<tr>
+			<td><p class="col-md-10">Фамилия</p></td>
+			<td><p class="col-md-10">Должность</p></td>
+			<td><p class="col-md-10">Зарплата</p></td>
+			<td><p class="col-md-10">Дата принятия на работу</p></td>
+		</tr>
+		@foreach (var empl in ViewBag.Position)
+		{
+			<tr>
+				<td><p class="col-md-10">@empl.Surname</p></td>
+				<td><p class="col-md-10">@empl.Position</p></td>
+				<td><p class="col-md-10">@empl.Salary</p></td>
+				<td><p class="col-md-10">@empl.Date.ToShortDateString().ToString()</p></td>
+			</tr>
+		}
+	</table>
+</div>

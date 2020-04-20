@@ -1,0 +1,76 @@
+﻿@model ElevenLab.Models.Worker
+
+@{
+    ViewBag.Title = "Сотрудники";
+}
+
+	<h2>Сотрудники</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Worker</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+			<text class="control-label col-md-2"> Имя </text>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+			<text class="control-label col-md-2"> Фамилия </text>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Surname, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Surname, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+			<text class="control-label col-md-2"> Отчество </text>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Patronymic, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Patronymic, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+			<text class="control-label col-md-2"> Пол </text>
+			<div class="col-md-10">
+				<span>Муж</span>
+				@Html.RadioButton("Gender", "М", new { htmlAttributes = new { @class = "form-control" } })
+				<span>Жен</span>
+				@Html.RadioButton("Gender", "Ж", new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+
+			</div>
+        </div>
+
+        <div class="form-group">
+			<text class="control-label col-md-2"> Дата рождения </text>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DateOfBirth, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Добавить" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Назад", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

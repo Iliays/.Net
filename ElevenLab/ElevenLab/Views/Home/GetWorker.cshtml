@@ -1,0 +1,21 @@
+﻿@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+	<h3>Сотрудники</h3>
+	<table class="table">
+		<tr>
+			<td><p class="col-md-10">Фамилия</p></td>
+			<td><p class="col-md-10">Должность</p></td>
+		</tr>
+		@foreach (var worker in ViewBag.Worker)
+		{
+			<tr>
+				<td><p class="col-md-10">@worker.Name</p></td>
+				<td><p class="col-md-10">@worker.Position</p></td>
+			</tr>
+		}
+
+	</table>
+</div>

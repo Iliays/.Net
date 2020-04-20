@@ -1,0 +1,94 @@
+﻿@{
+	ViewBag.Title = "Home Page";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+	<div>
+		<h3>Сотрудники</h3>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">@Html.Label("Фамилия")</th>
+					<th scope="col">@Html.Label("Имя")</th>
+					<th scope="col">@Html.Label("Отчество")</th>
+					<th scope="col">@Html.Label("Дата рождения")</th>
+					<th scope="col"> @Html.Label("Пол")</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var worker in ViewBag.Workers)
+				{
+					<tr>
+						<td>@worker.Surname</td>
+						<td>@worker.Name</td>
+						<td>@worker.Patronymic</td>
+						<td>@worker.DateOfBirth.ToShortDateString().ToString()</td>
+						<td>@worker.Gender</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+
+		<h4><a href="/Home/AddNewWorker">Добавить сотрудника</a></h4>
+
+		<div>
+			<h3>Должности</h3>
+			<table class="table">
+				<tr>
+					<td>@Html.Label("Название")</td>
+					<td>@Html.Label("Оклад")</td>
+				</tr>
+				@foreach (var position in ViewBag.Positions)
+				{
+					<tr>
+						<td><p class="col-md-10">@position.Name</p></td>
+						<td><p class="col-md-10">@position.Salary</p></td>
+					</tr>
+				}
+			</table>
+			<h4><a href="/Home/AddNewPosition">Добавить должность</a></h4>
+		</div>
+
+		<h2><a href="/Home/HistoryView">Посмотреть информацию о сотрудниках</a></h2>
+
+		<h4>Выбрать сотрудника по должности</h4>
+		<form method="get" action="/Home/GetWorker">
+			@Html.DropDownList("idPosition", ViewBag.Id as SelectList)
+			<input type="submit" value="Выбрать" />
+		</form>
+
+		<h4>Выбрать все занимаемые должности сотрудника</h4>
+		<form method="get" action="/Home/GetPosition">
+			@Html.DropDownList("idWorker", ViewBag.Id2 as SelectList)
+			<input type="submit" value="Выбрать" />
+		</form>
+
+		<h4>Вывести список сотрудников, принятых в выбранный интервал времени</h4>
+		<form method="post" action="/Home/GetWorkersDate">
+			<p>Введите дату с</p><br />
+			<input type="date" name="dateBegin" />
+			<p>Введите дату до</p><br />
+			<input type="date" name="dateEnd" />
+			<input type="submit" value="Выбрать" />
+		</form>
+
+		<h4><a href="/Home/GetMaxMinPosition">Максимальная Минимальная ЗП</a></h4>
+
+		<h4>Формирование сведений о движении сотрудника в хронологическом порядке</h4>
+		<form method="get" action="/Home/GetChronologic">
+			@Html.DropDownList("idWorker2", ViewBag.Id3 as SelectList)
+			<input type="submit" value="Выбрать" />
+		</form>
+
+		<h4>Формирование ведомости начисления заработной платы заопределенной месяц года</h4>
+		<form method="post" action="/Home/GetWorkerSalary">
+			<p>Введите месяц</p><br />
+			<input type="text" name="month" />
+			<p>Введите год</p><br />
+			<input type="text" name="year" />
+			<input type="submit" value="Выбрать" />
+		</form>
+
+	</div>
