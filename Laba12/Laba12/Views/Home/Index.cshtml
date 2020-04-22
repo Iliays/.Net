@@ -1,0 +1,25 @@
+﻿@{
+	var data = ViewBag.Message;
+	ViewBag.Title = "Home Page";
+}
+
+	<h3>@ViewBag.Message</h3>
+	<div>
+		<form method="get" action="/Account/Register">
+			<div class="form-group">
+				<div class="col-md-offset-2 col-md-10">
+					<input type="submit" value="Регистрация" class="btn btn-default" />
+				</div>
+			</div>
+		</form>
+		<br />
+		<br />
+		<br />
+		<form method="get" action="/Account/Login">
+			<div class="form-group">
+				<div class="col-md-offset-2 col-md-10">
+					<input type="submit" action="/Account/Login" value="Авторизация" class="btn btn-default" />
+				</div>
+			</div>
+		</form>
+	</div>

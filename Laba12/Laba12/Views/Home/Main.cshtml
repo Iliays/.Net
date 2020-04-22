@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Laba12.Models.List>
+
+@{
+	ViewBag.Title = "Main";
+}
+
+<h2>Главное окно</h2>
+
+<h2><a href="/Home/Chat">Написать сообщение</a></h2>
+
+<div><h3>@ViewBag.res</h3></div>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">@Html.Label("Заголовок сообщения")</th>
+			<th scope="col">@Html.Label("От кого")</th>
+			<th scope="col">@Html.Label("Дата получения")</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+		<tr>
+			<td>@Html.ActionLink(item.Title, "Message", "Home", new { Title = item.Title, login = item.login }, null)</td>
+			<td>@Html.DisplayFor(modelItem => item.login)</td>
+			<td>@Html.DisplayFor(modelItem => item.date)</td>
+		</tr>
+		}
+	</tbody>
+</table>
